@@ -16,8 +16,7 @@ jobs:
 
     - name: Run security check script
       run: # kaspersky
-        
-    - name: Run encryption script
+      - name: Run encryption script
       # run: # SHA-256
 
        - name: Upload encrypted report
