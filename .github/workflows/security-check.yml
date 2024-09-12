@@ -4,11 +4,10 @@ on:
     branches:
       - main
   workflow_dispatch:
-jobs:
-  security-check: windows 10
-    runs-on: windows-latest
-    steps: run kasperky
-    - name: Checkout repository
+jobs: check repositories
+  security-check: kaspersky
+  runs-on: windows-lastest
+    -name: Checkout repository
       - name: Run security check script
       run: # kaspersky
       - name: Run encryption script
