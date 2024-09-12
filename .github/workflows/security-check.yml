@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions
     - name: Run security check script
       run: # kaspersky
       - name: Run encryption script
