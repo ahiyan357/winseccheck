@@ -5,7 +5,7 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  security-check:
+  security-check: windows 10
     runs-on: windows-latest
     steps: run kasperky
     - name: Checkout repository
