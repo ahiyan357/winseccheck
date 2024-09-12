@@ -17,13 +17,10 @@ jobs:
     - name: Run security check script
       run: # kaspersky
         
-
     - name: Run encryption script
       # run: # SHA-256
 
-
-
-         - name: Upload encrypted report
+       - name: Upload encrypted report
       uses: actions/upload-artifact@v3
       with:
         name: encrypted-report
