@@ -1,0 +1,31 @@
+name: Security Check and Encrypt
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  security-check:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run security check script
+      run: |
+        powershell.exe -File .\check.ps1
+      shell: pwsh
+
+    - name: Run encryption script
+      run: |
+        powershell.exe -File .\encrypt.ps1
+      shell: pwsh
+
+    - name: Upload encrypted report
+      uses: actions/upload-artifact@v3
+      with:
+        name: encrypted-report
+        path: C:\SecurityCheckReport.txt.enc
