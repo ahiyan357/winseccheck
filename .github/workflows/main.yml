@@ -1,0 +1,9 @@
+git clone https://github.com/ahiyan357/WindowsSecurityCheck.git
+cd WindowsSecurityCheck
+git add check.ps1 encrypt.ps1
+git commit -m "Add security check and encryption scripts"
+git push origin main
+check.ps1
+#SHA-256
+encrypt.ps1
+#SHA-256
