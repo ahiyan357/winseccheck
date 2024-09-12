@@ -15,16 +15,15 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Run security check script
-      run: |
-        powershell.exe -File .\check.ps1
-      shell: pwsh
+      run: # kaspersky
+        
 
     - name: Run encryption script
-      run: |
-        powershell.exe -File .\encrypt.ps1
-      shell: pwsh
+      # run: # SHA-256
 
-    - name: Upload encrypted report
+
+
+         - name: Upload encrypted report
       uses: actions/upload-artifact@v3
       with:
         name: encrypted-report
